@@ -3,11 +3,15 @@ header {
     color: #af338a; /* Color del texto */
     padding: 20px; /* Espaciado interno */
     text-align: center; /* Alineación del texto */
+    width: 20%;
+    min-width: 0px;
+    height: 0%;
+    display: block;
   }
   
   /* Estilos del logo */
   .logo img {
-    width: 50px; /* Tamaño del logo */
+    width: 186px; /* Tamaño del logo */
     height: auto;
   }
   
