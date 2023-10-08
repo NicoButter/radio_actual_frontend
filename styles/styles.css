@@ -1,0 +1,42 @@
+header {
+    background-color: #fff; /* Color de fondo del encabezado */
+    color: #af338a; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+  }
+  
+  /* Estilos del logo */
+  .logo img {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
+  }
+  
+  /* Estilos del nombre de la radio */
+  .nombre-radio h1 {
+    font-size: 24px; /* Tamaño de fuente */
+    margin: 10px 0; /* Margen superior e inferior */
+  }
+  
+  /* Estilos de las noticias */
+  .noticias h2 {
+    font-size: 20px; /* Tamaño de fuente */
+  }
+  
+  .noticias-lista {
+    max-width: 800px; /* Ancho máximo para las noticias */
+    margin: 0 auto; /* Centrar las noticias horizontalmente */
+  }
+  
+  .noticias-lista .noticia {
+    border: 1px solid #ddd; /* Borde para cada noticia */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen inferior entre noticias */
+  }
+  
+  .noticias-lista .noticia h3 {
+    font-size: 18px; /* Tamaño de fuente para el título de la noticia */
+  }
+  
+  .noticias-lista .noticia p {
+    font-size: 16px; /* Tamaño de fuente para el texto de la noticia */
+  }
