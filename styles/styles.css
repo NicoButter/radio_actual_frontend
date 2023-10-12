@@ -1,46 +1,107 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Esto evita que aparezca una barra de desplazamiento vertical */
+}
+
+body{
+  font-family: 'Quicksand', sans-serif
+}
+
 header {
-    background-color: #fff; /* Color de fondo del encabezado */
-    color: #af338a; /* Color del texto */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Alineación del texto */
-    width: 20%;
-    min-width: 0px;
-    height: 0%;
-    display: block;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(/images/background-header.png);
+  background-size: 100% 100%; /* Ajusta la imagen para cubrir el 100% de la altura y el ancho del header */
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 150px;
+  width: auto;
+
+}
   
-  /* Estilos del logo */
-  .logo img {
-    width: 186px; /* Tamaño del logo */
-    height: auto;
-  }
+/* Estilos del logo */
+.logo img {
+  margin-left: 5%;
+  width: 750px; /* Tamaño del logo */
+  height: auto;
+  align-items: center;
+  text-align: center; /* Alineación del texto */
+}
   
-  /* Estilos del nombre de la radio */
-  .nombre-radio h1 {
-    font-size: 24px; /* Tamaño de fuente */
-    margin: 10px 0; /* Margen superior e inferior */
-  }
+/* Estilos del nombre de la radio */
+.nombre-radio h1 {
+  font-size: 24px; /* Tamaño de fuente */
+  margin: 10px 0; /* Margen superior e inferior */
+}
   
-  /* Estilos de las noticias */
-  .noticias h2 {
-    font-size: 20px; /* Tamaño de fuente */
-  }
+/* Estilos de las noticias */
+.noticias h2 {
+  font-size: 20px; /* Tamaño de fuente */
+}
   
-  .noticias-lista {
-    max-width: 800px; /* Ancho máximo para las noticias */
-    margin: 0 auto; /* Centrar las noticias horizontalmente */
-  }
+.noticias-lista {
+  max-width: 800px; /* Ancho máximo para las noticias */
+  margin: 0 auto; /* Centrar las noticias horizontalmente */
+}
   
-  .noticias-lista .noticia {
-    border: 1px solid #ddd; /* Borde para cada noticia */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 10px; /* Margen inferior entre noticias */
-  }
+.noticias-lista .noticia {
+  border: 1px solid #ddd; /* Borde para cada noticia */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 10px; /* Margen inferior entre noticias */
+}
   
-  .noticias-lista .noticia h3 {
-    font-size: 18px; /* Tamaño de fuente para el título de la noticia */
-  }
+.noticias-lista .noticia h3 {
+  font-size: 18px; /* Tamaño de fuente para el título de la noticia */
+}
   
-  .noticias-lista .noticia p {
-    font-size: 16px; /* Tamaño de fuente para el texto de la noticia */
-  }
+.noticias-lista .noticia p {
+  font-size: 16px; /* Tamaño de fuente para el texto de la noticia */
+}
+ 
+main {
+  background-color: #fff;
+  /* flex: 1; */
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  color: #fff; /* Cambia el color del texto según tus preferencias */
+  padding: 10px; /* Espaciado interno del footer */
+  position: absolute; /* Establece la posición absoluta */
+  bottom: 0; /* Coloca el footer en la parte inferior */
+  width: 100%; /* Ancho del footer al 100% del contenedor */
+  height: 12%;
+}
+
+footer .logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+footer .logo-footer img {
+  display:flex;
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+}
+
+footer .redes-sociales{
+  display: flex;
+  justify-content: space-arounds;
+}
+
+footer .redes-sociales img{
+  height: 25px;
+  display:flex;
+  justify-content: center;
+
+}
+
