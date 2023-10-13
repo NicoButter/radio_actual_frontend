@@ -13,7 +13,9 @@
 
     <!-- Link Styles -->
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/jplayer.blue.monday.scss">
+    
+    <!-- Enlace al reproguctor SoundManager -->
+    <script src="/js/soundmanager2.js"></script>
     
 </head>
 
@@ -36,7 +38,14 @@
         
         <h1>Bienvenido a Radio Actual</h1>
         <p>Escucha nuestra transmisión en vivo:</p>
-        <audio controls>
+
+        <div id="reproductor">
+            <button id="play">Play</button>
+            <input type="range" id="volumen" min="0" max="100" value="50">
+        </div>
+
+
+        <!--<audio controls>
             <source src="https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
@@ -52,7 +61,7 @@
     </main>
 
     <aside>
-        
+
     </aside>
     
     <footer>
@@ -71,7 +80,42 @@
     
     <!-- Link js -->
     <script src="/js/main.js"></script>
-    <script src="/js/jquery.jplayer.js"></script>
+
+    <!-- Configuracion de reproductor -->
+    <script>
+        soundManager.setup({
+        url: '/swf/',
+        onready: function() {
+            // SoundManager 2 está listo para su uso
+    
+            // Carga un archivo de audio
+            var mySound = soundManager.createSound({
+            id: 'miAudio',
+            url: 'https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA'
+            });
+    
+            // Obtén una referencia a los elementos HTML del reproductor
+            var playButton = document.getElementById('play');
+            var volumenControl = document.getElementById('volumen');
+    
+            // Agrega un evento para reproducir el audio cuando se haga clic en el botón
+            playButton.addEventListener('click', function() {
+            if (mySound.paused) {
+                mySound.resume();
+                playButton.innerHTML = 'Pause';
+            } else {
+                mySound.pause();
+                playButton.innerHTML = 'Play';
+            }
+            });
+    
+            // Agrega un evento para controlar el volumen
+            volumenControl.addEventListener('input', function() {
+            mySound.setVolume(this.value);
+            });
+        }
+        });
+    </script>
 
 </body>
 
