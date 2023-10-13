@@ -13,11 +13,8 @@
 
     <!-- Link Styles -->
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/mediaelementplayer.css">
+    <link rel="stylesheet" href="/styles/jplayer.blue.monday.scss">
     
-    <!-- Link js -->
-    <script src="/js/main.js"></script>
-    <script src="/js/control_reproductor.js"></script>
 </head>
 
 <body>
@@ -36,17 +33,30 @@
     </header>
     
     <main>
+        
         <h1>Bienvenido a Radio Actual</h1>
         <p>Escucha nuestra transmisión en vivo:</p>
-
         <audio controls>
             <source src="https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
-        
+        <div id="jp_container_1" class="jp-video">
+
+        </div>
+
+        <!--<audio controls>
+            <source src="https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>-->
+
     </main>
+
+    <aside>
+        
+    </aside>
     
     <footer>
+        
         <div class="logo-footer">
             <img src="/images/logo-trasnparente-footer.png" alt="">
         </div>
@@ -59,7 +69,9 @@
 
     </footer>
     
-    <script src="/js/player.js"></script>
+    <!-- Link js -->
+    <script src="/js/main.js"></script>
+    <script src="/js/jquery.jplayer.js"></script>
 
 </body>
 

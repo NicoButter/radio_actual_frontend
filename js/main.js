@@ -28,3 +28,16 @@ fetch(rssFeedURL, {mode:'no-cors'})
   .catch(error => {
     console.error('Error al obtener el feed RSS:', error);
   });
+
+  $(document).ready(function () {
+    $("#jp_container_1").jPlayer({
+        ready: function (event) {
+            $(this).jPlayer("setMedia", {
+                title: "Mi canción",
+                m4a: "ruta-a-tu-archivo-de-audio.m4a",
+            });
+        },
+        swfPath: "ruta-al-archivo-jplayer.swf",
+        supplied: "m4a",
+    });
+});

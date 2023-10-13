@@ -65,15 +65,19 @@ header {
 }
  
 main {
-  background-color: #fff;
+  background-color: #ababab;
   /* flex: 1; */
 }
 
 footer {
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
-  color: #fff; /* Cambia el color del texto según tus preferencias */
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(/images/background-footer.png);
+  background-size: 100% 100%; /* Ajusta la imagen para cubrir el 100% de la altura y el ancho del header */
+  background-repeat: no-repeat;
+  color: #ababab; /* Cambia el color del texto según tus preferencias */
   padding: 10px; /* Espaciado interno del footer */
   position: absolute; /* Establece la posición absoluta */
   bottom: 0; /* Coloca el footer en la parte inferior */
@@ -87,21 +91,20 @@ footer .logo-footer {
 }
 
 footer .logo-footer img {
-  display:flex;
-  height: 50px;
+  height: 100px;
   width: auto;
   border-radius: 50%;
 }
 
 footer .redes-sociales{
   display: flex;
-  justify-content: space-arounds;
+  justify-content: space-between;
+  padding: 40px;
 }
 
 footer .redes-sociales img{
   height: 25px;
-  display:flex;
-  justify-content: center;
+  padding: 15px;
 
 }
 
