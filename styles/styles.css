@@ -14,7 +14,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url(./images/background-header.png);
+  background-image: url(../images/background-header.png);
   background-size: 100% 100%; /* Ajusta la imagen para cubrir el 100% de la altura y el ancho del header */
   background-repeat: no-repeat;
   text-align: center;
@@ -74,7 +74,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-image: url(./images/background-footer.png);
+  background-image: url(../images/background-footer.png);
   background-size: 100% 100%; /* Ajusta la imagen para cubrir el 100% de la altura y el ancho del header */
   background-repeat: no-repeat;
   color: #ababab; /* Cambia el color del texto según tus preferencias */
