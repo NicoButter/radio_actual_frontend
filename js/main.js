@@ -28,5 +28,4 @@ fetch(rssFeedURL)
   .catch(error => {
     console.error('Error al obtener el feed RSS:', error);
   });
-
   

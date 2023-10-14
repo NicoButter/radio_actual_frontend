@@ -4,10 +4,12 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden; /* Esto evita que aparezca una barra de desplazamiento vertical */
+  font-family: 'Quicksand', sans-serif
 }
 
-body{
-  font-family: 'Quicksand', sans-serif
+body img {
+  height: 800px;
+  width: auto;  
 }
 
 header {
@@ -24,26 +26,33 @@ header {
   width: auto;
 
 }
-  
+
 /* Estilos del logo */
-.logo img {
+header .logo img {
   margin-left: 5%;
   width: 750px; /* Tamaño del logo */
   height: auto;
   align-items: center;
   text-align: center; /* Alineación del texto */
 }
-  
+
+
+
+
+
+
 /* Estilos del nombre de la radio */
 .nombre-radio h1 {
   font-size: 24px; /* Tamaño de fuente */
   margin: 10px 0; /* Margen superior e inferior */
 }
-  
+
 /* Estilos de las noticias */
 .noticias h2 {
   font-size: 20px; /* Tamaño de fuente */
+  padding: 20%;
 }
+
   
 .noticias-lista {
   max-width: 800px; /* Ancho máximo para las noticias */
@@ -66,25 +75,61 @@ header {
 
 .nav {
   display: flex;
+  align-content: center;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
   justify-content: space-around;
   background-color: #ababab;
 }
+
+.nav ul {
+    list-style: none;
+    display: flex; /* Esto hace que los elementos se muestren en línea horizontal */
+    gap: 20px; /* Espacio entre elementos del menú */
+}
+
+/*.rss-feed h2 {
+  margin-left: 25px;
+}
+  
 
 .nav a {
   text-decoration: none;
   color: #f41a5f;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  font-size: 18px;
+}
+
+/* Cambiar color de enlace en el hover 
+nav li:hover {
+  color: #ffd700; /* Color de texto al pasar el mouse por encima 
+  cursor: pointer;
+}*/
+
  
-main {
-
+main article {
+  padding: 25px;
 }
 
-main a{
-
+main .reproductor {
+    border: 2px #000; /* Define el contorno de 2 píxeles de ancho y color negro */
+    padding: 10px; /* Añade un espacio de 10 píxeles entre el contenido y el contorno */
+    border-radius: 5px;
+    border-style: groove;
+    width:fit-content ;
 }
 
+main section {
+  padding: 25px;
+}
 
 footer {
   display: flex;

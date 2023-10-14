@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Actual</title>
+    <title>Radio Actual 93.5</title>
 
     <!-- Link google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+
 
     <!-- Link Styles -->
     <link rel="stylesheet" href="./styles/styles.css">
@@ -28,9 +31,11 @@
     
     <header>
         <div 
-            class="logo"><img src="./images/marca_ACTUAL_935.png" alt="Logo de la radio">
+            class="logo"><img src="./images/logo-radio-header.png" alt="Logo de la radio">
         </div>
-        
+    </header>
+
+    <nav class="nav">
         <div id="rss-feed">
             <h2>últimas noticias</h2>
             <ul id="news-list">
@@ -38,23 +43,31 @@
             </ul>
         </div>
 
-        
-
-    </header>
-
-    <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Inicio</a>
-        <a href="#">Inicio</a>
+        <ul>
+            <li>inicio</li>
+            <li>principales portales</li>
+            <li>Contacto</li>
+        </ul>
     </nav>
+
+   
     
     <main>
-      <h1>actual como vos</h1>
-      <p>Escucha nuestra transmisión en vivo</p>
-      <div class="reproductor">
-        <button id="play-pause">Play</button>
-        <input type="range" id="volume-control" min="0" max="100" value="50">
-      </div>
+        
+        <article>
+            <h1>actual como vos</h1>
+            <div class="reproductor">
+                <p>Escucha nuestra transmisión en vivo</p>
+                <button id="play-pause">Play</button>
+                <input type="range" id="volume-control" min="0" max="100" value="50">
+            </div>
+        </article>
+     
+        <section>
+            <p>Noticias Importabtes</p>
+        </section>
+    
+    
     </main>
 
     
