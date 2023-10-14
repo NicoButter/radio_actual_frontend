@@ -63,11 +63,28 @@ header {
 .noticias-lista .noticia p {
   font-size: 16px; /* Tamaño de fuente para el texto de la noticia */
 }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  background-color: #ababab;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #f41a5f;
+}
  
 main {
-  background-color: #ababab;
-  /* flex: 1; */
+
 }
+
+main a{
+
+}
+
 
 footer {
   display: flex;

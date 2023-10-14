@@ -1,10 +1,10 @@
 const newsList = document.getElementById('news-list');
 
 // URL del feed RSS proporcionado por el gobierno de la provincia
-const rssFeedURL = 'https://www.infobae.com/feeds/rss/';
+const rssFeedURL = 'https://noticias.santacruz.gob.ar/?format=feed';
 
 // Utiliza la función fetch para obtener el feed RSS
-fetch(rssFeedURL, {mode:'no-cors'})
+fetch(rssFeedURL)
   .then(response => response.text())
   .then(data => {
     // Parsea el XML del feed RSS en un objeto Document
