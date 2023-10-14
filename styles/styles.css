@@ -87,33 +87,6 @@ header .logo img {
     display: flex; /* Esto hace que los elementos se muestren en línea horizontal */
     gap: 20px; /* Espacio entre elementos del menú */
 }
-
-/*.rss-feed h2 {
-  margin-left: 25px;
-}
-  
-
-.nav a {
-  text-decoration: none;
-  color: #f41a5f;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav li {
-  font-size: 18px;
-}
-
-/* Cambiar color de enlace en el hover 
-nav li:hover {
-  color: #ffd700; /* Color de texto al pasar el mouse por encima 
-  cursor: pointer;
-}*/
-
  
 main article {
   padding: 25px;
