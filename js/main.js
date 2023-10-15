@@ -1,12 +1,9 @@
 const newsList = document.getElementById('news-list');
 
-const rssFeedURL = 'https://www.infobae.com/feeds/rss/';
+const rssFeedURL = 'https://noticias.santacruz.gob.ar/itemlist?format=feed&amp;type=rss';
 
-// URL de tu propio servidor proxy
-const proxyURL = 'https://www.radioactual.com.ar/';  // Reemplaza esto con la URL de tu propio servidor proxy
-
-// Utiliza la función fetch para obtener el feed RSS a través del proxy
-fetch(`${proxyURL}?url=${encodeURIComponent(rssFeedURL)}`)
+// Utiliza la función fetch para obtener el feed RSS directamente
+fetch(rssFeedURL)
     .then(response => response.text())
     .then(data => {
         // El resto del código para procesar el feed RSS es el mismo
