@@ -1,6 +1,40 @@
 const newsList = document.getElementById('news-list');
 
-const rssFeedURL = 'https://www.bbc.co.uk/mundo/temas/america_latina/index.xml';
+const rssFeedURL = 'https://cors-anywhere.herokuapp.com/https://noticias.santacruz.gob.ar/?format=feed'; // Reemplaza 'URL_DEL_FEED_RSS' con la URL del feed RSS que deseas mostrar
+
+// Utiliza la función fetch para obtener el feed RSS
+fetch(rssFeedURL)
+    .then(response => response.text())
+    .then(data => {
+        // Parsea el XML del feed RSS en un objeto Document
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+        // Encuentra todos los elementos <item> que representan noticias en el feed
+        const items = xmlDoc.querySelectorAll('item');
+
+        // Itera a través de los elementos <item> y muestra las noticias
+        items.forEach(item => {
+            const title = item.querySelector('title').textContent;
+            const link = item.querySelector('link').textContent;
+
+            // Crea un elemento <li> para cada noticia y añádelo a la lista
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
+            newsList.appendChild(listItem);
+        });
+    })
+    .catch(error => {
+        console.error('Error al obtener el feed RSS:', error);
+    });
+
+
+
+
+
+/*const newsList = document.getElementById('news-list');
+
+const rssFeedURL = 'https://cors-anywhere.herokuapp.com/https://www.bbc.co.uk/mundo/temas/america_latina/index.xml';
 
 // Utiliza la función fetch para obtener el feed RSS directamente
 fetch(rssFeedURL)
@@ -27,7 +61,7 @@ fetch(rssFeedURL)
     })
     .catch(error => {
         console.error('Error al obtener el feed RSS:', error);
-    });
+    });*/
 
 
 

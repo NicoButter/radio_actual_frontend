@@ -17,8 +17,7 @@
     <!-- Link Styles -->
     <link rel="stylesheet" href="./styles/styles.css">
 
-    <!-- Link js -->
-    <script src="./js/main.js"></script>
+    
 
     <!-- link howler -->
     <script src="./js/howler.min.js"></script>
@@ -41,13 +40,6 @@
     </header>
 
     <nav class="nav">
-        <div id="rss-feed">
-            <h2>últimas noticias</h2>
-            <ul id="news-list">
-                <!-- Aquí se cargarán las noticias del feed RSS -->
-            </ul>
-        </div>
-
         <ul>
             <li><a href="./index.html" target="_blank">inicio</a></li>
             <li><a href="https://www.santacruz.gob.ar/" target="_blank">principales portales</a></li>
@@ -67,7 +59,12 @@
         </article>
      
         <section>
-            <p>Noticias Importantes</p>
+            <div id="rss-feed">
+                <h2>últimas noticias</h2>
+                <ul id="news-list">
+                    <!-- Aquí se cargarán las noticias del feed RSS -->
+                </ul>
+            </div>
         </section>
     
     
@@ -120,7 +117,8 @@
         });
     </script>
 
-
+    <!-- Link noticias js -->
+    <script src="./js/main.js"></script>
 
 
 
