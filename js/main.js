@@ -1,6 +1,6 @@
 const newsList = document.getElementById('news-list');
 
-const rssFeedURL = 'https://noticias.santacruz.gob.ar/itemlist?format=feed&amp;type=rss';
+const rssFeedURL = 'http://www.bbc.co.uk/mundo/temas/america_latina/index.xml';
 
 // Utiliza la función fetch para obtener el feed RSS directamente
 fetch(rssFeedURL)
