@@ -56,9 +56,8 @@ header .logo img {
   height: auto;
 }
 #news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  max-height: 300px; /* Establece una altura máxima para el contenedor de noticias */
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
 }
 
 #news-list li {
