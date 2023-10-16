@@ -1,10 +1,16 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  /*width: 100%;*/
   height: 100%;
   overflow: hidden; /* Esto evita que aparezca una barra de desplazamiento vertical */
   font-family: 'Quicksand', sans-serif
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 body img {
@@ -52,8 +58,8 @@ header .logo {
 }
 
 header .logo img {
-  width: 750px; /* Tamaño del logo */
-  height: auto;
+  max-width: 100%; /* La imagen se ajustará al tamaño de su contenedor */
+  height: auto; /* Mantiene la proporción original de la imagen */
 }
 #news-list {
   max-height: 300px; /* Establece una altura máxima para el contenedor de noticias */
@@ -87,6 +93,11 @@ header .logo img {
     list-style: none;
     display: flex; /* Esto hace que los elementos se muestren en línea horizontal */
     gap: 20px; /* Espacio entre elementos del menú */
+}
+
+main {
+  flex: 1;
+  padding-bottom: 50px; /* Ajusta el valor según tus necesidades */
 }
  
 main article {

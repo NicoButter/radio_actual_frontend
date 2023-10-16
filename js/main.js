@@ -1,6 +1,6 @@
 const newsList = document.getElementById('news-list');
 
-const rssFeedURL = 'https://cors-anywhere.herokuapp.com/https://noticias.santacruz.gob.ar/?format=feed'; // Reemplaza 'URL_DEL_FEED_RSS' con la URL del feed RSS que deseas mostrar
+const rssFeedURL = 'https://corsproxy.io?https://noticias.santacruz.gob.ar/?format=feed'; // Reemplaza 'URL_DEL_FEED_RSS' con la URL del feed RSS que deseas mostrar
 
 // Utiliza la función fetch para obtener el feed RSS
 fetch(rssFeedURL)
