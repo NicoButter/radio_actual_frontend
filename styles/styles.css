@@ -10,7 +10,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body img {
@@ -81,7 +81,8 @@ header .logo img {
 }
 
 main {
-  flex: 1;
+  flex-grow: 1;
+  /*flex: 1;*/
   display: flex;
   /*padding-bottom: 50px; /* Ajusta el valor según tus necesidades */
   margin-bottom: 50px; /* Ajusta el valor según sea necesario para dejar suficiente espacio */
@@ -133,9 +134,6 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /*background-image: url(../images/background-footer.png);*/
-  background-size: 100% 100%; /* Ajusta la imagen para cubrir el 100% de la altura y el ancho del header */
-  background-repeat: no-repeat;
   color: #ababab; /* Cambia el color del texto según tus preferencias */
   padding: 10px; /* Espaciado interno del footer */
   position: absolute; /* Establece la posición absoluta */
