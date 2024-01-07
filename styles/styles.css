@@ -21,16 +21,12 @@ body img {
 header {
   display: flex;
   align-items: center;
-  /*justify-content: space-between;
-  /*background-image: url(../images/background-header.png);*/
-  background-size: 100% 100%; /* Ajusta la imagen para cubrir el 100% de la altura y el ancho del header */
-  background-repeat: no-repeat;
+  /*justify-content: space-between;*/
   text-align: center;
-  padding: 0;
-  margin: 0;
+  /*padding: 20;
+  margin: 0;*/
   height: 150px;
   width: auto;
-
 }
 
 .header-border-bottom {
@@ -56,7 +52,8 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 20px;
+  padding: 30px 15px;
+
 }
 
 header .logo img {
