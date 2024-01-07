@@ -1,14 +1,5 @@
 const newsList = document.getElementById('news-list');
-/*const rssFeedURL = 'https://corsproxy.io?https://www.santacruzalmomento.com.ar/feed/';*/
-const rssFeedURL = 'https://crossorigin.me/https://www.santacruzalmomento.com.ar/feed/';
-
-async function getImageUrl(newsLink) {
-    const response = await fetch(newsLink);
-    const html = await response.text();
-    const doc = new DOMParser().parseFromString(html, 'text/html');
-    const imageElement = doc.querySelector('meta[property="og:image"]');
-    return imageElement ? imageElement.getAttribute('content') : 'No image available';
-}
+const rssFeedURL = 'https://corsproxy.io?https://www.santacruzalmomento.com.ar/feed/';
 
 fetch(rssFeedURL)
     .then(response => response.text())
@@ -24,42 +15,31 @@ fetch(rssFeedURL)
         const newsList = document.getElementById('news-list');
 
         // Itera a través de los elementos <item> y muestra las noticias como elementos de lista
-        // Dentro del bucle que recorre los elementos <item>
-        // Dentro del bucle que recorre los elementos <item>
-        items.forEach(async item => {
+        items.forEach(item => {
             const title = item.querySelector('title').textContent;
             const link = item.querySelector('link').textContent;
-        
-            // Llamada a la función para obtener la URL de la imagen
-            const imageUrl = await getImageUrl(link);
-        
-            console.log('Title:', title);
-            console.log('Link:', link);
-            console.log('Image URL:', imageUrl);
-        
+            const description = item.querySelector('description').textContent;
+            const imageSrc = extractImageSrcFromDescription(description);
+
+            // Crea un elemento <li> para cada noticia y añádelo a la lista
             const listItem = document.createElement('li');
-            listItem.innerHTML = `<img src="${imageUrl}" alt="${title}"><a href="${link}" target="_blank">${title}</a>`;
+            listItem.classList.add('news-item'); // Agrega la clase para aplicar estilos
+            listItem.innerHTML = `
+                <img src="${imageSrc}" alt="${title}">
+                <a href="${link}" target="_blank">${title}</a>
+            `;
             newsList.appendChild(listItem);
         });
-
-
     })
     .catch(error => {
         console.error('Error al obtener el feed RSS:', error);
     });
 
 // Función para extraer la URL de la imagen desde la descripción del feed
-function extractImageSrcFromDescription(descriptionElement) {
-    // Verificar si la descripción contiene una etiqueta img
-    const imgElement = descriptionElement.querySelector('img');
-    
-    if (imgElement) {
-        // Si hay una etiqueta img, obtener la URL de la imagen
-        return imgElement.getAttribute('src');
-    } else {
-        // Si no hay una etiqueta img, proporcionar un valor predeterminado
-        return 'No image available';
-    }
+function extractImageSrcFromDescription(description) {
+    const doc = new DOMParser().parseFromString(description, 'text/html');
+    const imgElement = doc.querySelector('img');
+    return imgElement ? imgElement.src : 'URL_POR_DEFECTO_SI_NO_HAY_IMAGEN';
 }
 
 
