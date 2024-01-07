@@ -56,6 +56,7 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 20px;
 }
 
 header .logo img {
@@ -86,6 +87,8 @@ main {
   flex: 1;
   display: flex;
   /*padding-bottom: 50px; /* Ajusta el valor según tus necesidades */
+  margin-bottom: 50px; /* Ajusta el valor según sea necesario para dejar suficiente espacio */
+
 }
  
 main article {
@@ -142,6 +145,7 @@ footer {
   bottom: 0; /* Coloca el footer en la parte inferior */
   width: 100%; /* Ancho del footer al 100% del contenedor */
   height: 12%;
+  margin-bottom: 50px; /* Ajusta el valor según sea necesario para dejar suficiente espacio */
 }
 
 footer .logo-footer {

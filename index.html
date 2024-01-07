@@ -23,6 +23,9 @@
     <!-- link howler -->
     <script src="./js/howler.min.js"></script>
 
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.peaks.js"></script>
+
 </head>
 <body>
     <header>
@@ -47,14 +50,19 @@
     <main>
         <article>
             <h1>actual como vos</h1>
+
+            <!-- <audio id="audio" controls>
+                <source src="https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA" type="audio/mp3">
+            </audio> -->
+
             <div class="reproductor">
                 <p>Escucha nuestra transmisión en vivo</p>
                 <button id="play-pause">Play</button>
                 <input type="range" id="volume-control" min="0" max="100" value="50">
             </div>
-            <div id="vumeter-container">
-                <div id="vumeter"></div>
-            </div>
+            
+            
+            <div class="visualizer-container"></div>
             <div class="iframe-container">
                 <iframe width="480" height="300" src="https://www.youtube.com/embed/L-LHSQ-78Ps" title="Cámaras Ushuaia" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -123,10 +131,11 @@
             var volume = parseFloat(this.value) / 100;  // Convertir el valor del rango a un valor de volumen entre 0.0 y 1.0
             sound.volume(volume);  // Establecer el volumen del sonido
         });
-    </script> -->
+    </script>
 
     <!-- Link noticias js -->
     <script src="./js/main.js"></script>
+    <script src="./js/visualizer.js"></script>
 
     <!-- Vumetro -->
     <script src="https://unpkg.com/wavesurfer.js"></script>
