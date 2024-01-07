@@ -42,6 +42,7 @@ header {
   background: linear-gradient(to left, #ababab, #f41a5f);
   animation: animate-header-border-bottom 2s linear infinite;
 }
+
 @keyframes animate-header-border-bottom {
   100%{
     transform: translateX(-100%);
@@ -61,24 +62,6 @@ header .logo img {
   max-width: 100%; /* La imagen se ajustará al tamaño de su contenedor */
   height: auto; /* Mantiene la proporción original de la imagen */
 }
-#news-list {
-  max-height: 300px; /* Establece una altura máxima para el contenedor de noticias */
-  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
-}
-
-#news-list li {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-#news-list li a {
-  text-decoration: none;
-  color: #333; /* Color del texto para los enlaces de noticias */
-}
-
-#news-list li a:hover {
-  color: #f41a5f; /* Color del texto cuando se pasa el cursor por encima */
-}
 
 .nav {
   display: flex;
@@ -95,9 +78,14 @@ header .logo img {
     gap: 20px; /* Espacio entre elementos del menú */
 }
 
+.nav ul a {
+  text-decoration: none;
+}
+
 main {
   flex: 1;
-  padding-bottom: 50px; /* Ajusta el valor según tus necesidades */
+  display: flex;
+  /*padding-bottom: 50px; /* Ajusta el valor según tus necesidades */
 }
  
 main article {
@@ -113,7 +101,29 @@ main .reproductor {
 }
 
 main section {
+  /* display: flex; */
+  flex: 1;
   padding: 25px;
+  background-color: #fff; /* Cambia el color de fondo según tus preferencias */
+}
+
+#news-list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#rss-feed {
+  margin-bottom: 20px; /* Ajusta la cantidad de margen inferior según tus necesidades */
+}
+
+
+.iframe-container {
+  margin-top: 20px; /* Ajusta el margen superior para separarlo del reproductor */
+  border: 1px solid #ccc; /* Agrega un borde al contenedor del iframe */
+  padding: 10px; /* Añade un espacio interno alrededor del iframe */
+  width: 100%; /* Establece el ancho del contenedor al 100% del artículo */
+  max-width: 512px; /* Establece un ancho máximo para evitar que sea demasiado ancho */
+  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total del contenedor */
 }
 
 footer {
@@ -138,9 +148,10 @@ footer .logo-footer {
 }
 
 footer .logo-footer img {
-  height: 100px;
+  height: 110px;
   width: auto;
   border-radius: 50%;
+  margin-left: 20px;
 }
 
 footer .redes-sociales{
@@ -164,6 +175,33 @@ footer .border-top {
   background: linear-gradient(to right, #ababab, #f41a5f);
   animation: animate-border-top 2s linear infinite;
 }
+
+#news-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que las noticias se ajusten automáticamente a la fila siguiente si no hay espacio suficiente */
+}
+
+.news-item {
+  width: 30%; /* Ajusta el ancho según tu preferencia */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total del contenedor */
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Añade bordes redondeados a las imágenes */
+}
+
+
+
+
 @keyframes animate-border-top {
   0%{
     transform: translateX(-150%);
