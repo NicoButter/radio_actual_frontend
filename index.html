@@ -17,15 +17,14 @@
     <!-- Link Styles -->
     <link rel="stylesheet" href="./styles/styles.css">
 
-    
+    <!-- Enlace a fortawasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
 
     <!-- link howler -->
     <script src="./js/howler.min.js"></script>
 
 </head>
-
 <body>
-    
     <header>
         <span class="header-border-top"></span>
         <span class="header-border-right"></span>
@@ -38,23 +37,23 @@
 
         <span class="header-border-bottom"></span>
     </header>
-
     <nav class="nav">
         <ul>
             <li><a href="/index.html" target="_blank">inicio</a></li>
-            <li><a href="https://www.santacruz.gob.ar/" target="_blank">de interés</a></li>
+            <li><a href="https://www.santacruzalmomento.com.ar/" target="_blank">de interés</a></li>
             <li><a href="" target="_blank"></a>Contacto</li>
         </ul>
     </nav>
-   
     <main>
-        
         <article>
             <h1>actual como vos</h1>
             <div class="reproductor">
                 <p>Escucha nuestra transmisión en vivo</p>
                 <button id="play-pause">Play</button>
                 <input type="range" id="volume-control" min="0" max="100" value="50">
+            </div>
+            <div id="vumeter-container">
+                <div id="vumeter"></div>
             </div>
             <div class="iframe-container">
                 <iframe width="480" height="300" src="https://www.youtube.com/embed/L-LHSQ-78Ps" title="Cámaras Ushuaia" 
@@ -63,7 +62,6 @@
                 </iframe>
             </div>
         </article>
-     
         <section>
             <div id="rss-feed">
                 <h2>últimas noticias</h2>
@@ -71,20 +69,20 @@
                     <!-- Aquí se cargarán las noticias del feed RSS -->
                 </ul>
             </div>
+            <div id="ad-banner">
+                <img src="../images/publicite_aqui.png" alt="publicite_aqui">
+                <img src="../images/publicite_aqui.png" alt="publicite_aqui">
+                <img src="../images/publicite_aqui.png" alt="publicite_aqui">
+            </div>
         </section>
         
-        
-    
-    
     </main>
-    
     <footer>
-        
         <div class="logo-footer">
             <img src="./images/logo-trasnparente-footer.png" alt="">
         </div>
         <p class="footer-description">Descubre, disfruta y comparte la mejor música con nosotros</p>
-        <p class="copyright">&copy; 2023 Radio Actual.</p>
+        <p class="copyright">&copy; 2024 Radio Actual</p>
         <div class="redes-sociales">
             <span class="border-top"></span>
             <a href="https://www.facebook.com/actualcomovos"><img src="./images/logo-facebook.png" alt="logo-facebook"></a>
@@ -93,9 +91,7 @@
             <a href="http://www.twitter.com/actualcomovos"></a><img src="./images/logo-x.png" alt="logo-x">
             <a href="https://t.me/actualrgl"><img src="./images/logo-telegram.png" alt="logo-telegram"></a>
         </div>
-
     </footer>
-    
     <!-- Script JavaScript para el reproductor de audio -->
     <script>
         // Inicializa el reproductor de audio
@@ -129,9 +125,9 @@
     <!-- Link noticias js -->
     <script src="./js/main.js"></script>
 
-
-
+    <!-- Vumetro -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.peaks.js"></script>
 
 </body>
-
 </html>

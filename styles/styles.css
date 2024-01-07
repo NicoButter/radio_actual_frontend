@@ -113,6 +113,8 @@ main section {
 }
 
 #rss-feed {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px; /* Ajusta la cantidad de margen inferior según tus necesidades */
 }
 
@@ -199,7 +201,16 @@ footer .border-top {
   border-radius: 5px; /* Añade bordes redondeados a las imágenes */
 }
 
+#ad-banner {
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  text-align: center; /* Centra el contenido del contenedor */
+}
 
+/* Estilos adicionales según sea necesario para el banner de publicidad */
+#ad-banner img {
+  max-width: 30%; /* Ajusta el ancho máximo según sea necesario */
+  height: auto;
+}
 
 
 @keyframes animate-border-top {
