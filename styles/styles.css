@@ -1,9 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*width: 100%;*/
   height: 100%;
-  overflow: hidden; /* Esto evita que aparezca una barra de desplazamiento vertical */
+  overflow: hidden; 
   font-family: 'Quicksand', sans-serif
 }
 
@@ -21,10 +20,7 @@ body img {
 header {
   display: flex;
   align-items: center;
-  /*justify-content: space-between;*/
   text-align: center;
-  /*padding: 20;
-  margin: 0;*/
   height: 150px;
   width: auto;
 }
@@ -57,8 +53,8 @@ header .logo {
 }
 
 header .logo img {
-  max-width: 100%; /* La imagen se ajustará al tamaño de su contenedor */
-  height: auto; /* Mantiene la proporción original de la imagen */
+  max-width: 100%; 
+  height: auto; 
 }
 
 .nav {
@@ -67,26 +63,43 @@ header .logo img {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  /*background-color: #ababab;*/
 }
 
 .nav ul {
     list-style: none;
-    display: flex; /* Esto hace que los elementos se muestren en línea horizontal */
-    gap: 20px; /* Espacio entre elementos del menú */
+    display: flex; 
+    gap: 20px; 
 }
 
 .nav ul a {
   text-decoration: none;
+  font-size: 25px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  transition: font-size 0.3s ease; /* Añade una transición suave al cambio de tamaño */
 }
 
-main {
-  flex-grow: 1;
-  /*flex: 1;*/
+/*.nav {
   display: flex;
-  /*padding-bottom: 50px; /* Ajusta el valor según tus necesidades */
-  margin-bottom: 50px; /* Ajusta el valor según sea necesario para dejar suficiente espacio */
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
+.nav ul {
+    list-style: none;
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav ul a {
+  text-decoration: none;
+}*/
+
+main {
+  min-height: 100vh;
+  display: flex;
+  margin-bottom: 50px;
+  align-items: flex-start;
 }
  
 main article {
@@ -94,18 +107,17 @@ main article {
 }
 
 main .reproductor {
-    border: 2px #000; /* Define el contorno de 2 píxeles de ancho y color negro */
-    padding: 10px; /* Añade un espacio de 10 píxeles entre el contenido y el contorno */
+    border: 2px #000; 
+    padding: 10px; 
     border-radius: 5px;
     border-style: groove;
     width:fit-content ;
 }
 
 main section {
-  /* display: flex; */
   flex: 1;
   padding: 25px;
-  background-color: #fff; /* Cambia el color de fondo según tus preferencias */
+  background-color: #fff; 
 }
 
 #news-list li a {
@@ -116,17 +128,17 @@ main section {
 #rss-feed {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px; /* Ajusta la cantidad de margen inferior según tus necesidades */
+  margin-bottom: 20px; 
 }
 
 
 .iframe-container {
-  margin-top: 20px; /* Ajusta el margen superior para separarlo del reproductor */
-  border: 1px solid #ccc; /* Agrega un borde al contenedor del iframe */
-  padding: 10px; /* Añade un espacio interno alrededor del iframe */
-  width: 100%; /* Establece el ancho del contenedor al 100% del artículo */
-  max-width: 512px; /* Establece un ancho máximo para evitar que sea demasiado ancho */
-  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total del contenedor */
+  margin-top: 20px; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  width: 100%; 
+  max-width: 512px; 
+  box-sizing: border-box; 
 }
 
 footer {
@@ -134,13 +146,32 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: #ababab; /* Cambia el color del texto según tus preferencias */
-  padding: 10px; /* Espaciado interno del footer */
-  position: absolute; /* Establece la posición absoluta */
-  bottom: 0; /* Coloca el footer en la parte inferior */
-  width: 100%; /* Ancho del footer al 100% del contenedor */
-  height: 12%;
-  margin-bottom: 50px; /* Ajusta el valor según sea necesario para dejar suficiente espacio */
+  color: #ababab; 
+  padding: 10px; 
+  position: absolute; 
+  bottom: 0; 
+  width: 100%;
+  height: 10%; 
+  margin-bottom: 20px; 
+}
+
+.footer-description{
+  font-size: 25px; 
+  color: #333;
+  font-weight: bold; 
+  font-style: italic; 
+}
+
+.copyright{
+  font-size: 25px; 
+  color: #333;
+  font-weight: bold; 
+}
+
+.redes-sociales h2{
+  font-size: 25px; 
+  color: #333;
+  font-weight: bold;  
 }
 
 footer .logo-footer {
@@ -158,13 +189,13 @@ footer .logo-footer img {
 footer .redes-sociales{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 40px;
 }
 
 footer .redes-sociales img{
-  height: 25px;
+  height: 30px;
   padding: 15px;
-
 }
 
 footer .border-top {
@@ -181,46 +212,46 @@ footer .border-top {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permite que las noticias se ajusten automáticamente a la fila siguiente si no hay espacio suficiente */
+  flex-wrap: wrap; 
 }
 
 .news-item {
-  width: 30%; /* Ajusta el ancho según tu preferencia */
+  width: 30%; 
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
   text-align: center;
-  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total del contenedor */
+  box-sizing: border-box; 
 }
 
 .news-item img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 5px; /* Añade bordes redondeados a las imágenes */
+  border-radius: 5px; 
 }
 
 #ad-banner {
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-  text-align: center; /* Centra el contenido del contenedor */
+  margin-top: 20px; 
+  text-align: center; 
 }
 
 /* Estilos adicionales según sea necesario para el banner de publicidad */
 #ad-banner img {
-  max-width: 30%; /* Ajusta el ancho máximo según sea necesario */
+  max-width: 30%; 
   height: auto;
 }
 
 #vumeter-container {
   width: 100%;
-  height: 20px; /* Ajusta la altura según tus necesidades */
+  height: 20px; 
   background-color: #eee;
-  margin-top: 10px; /* Puedes ajustar la posición vertical según tus necesidades */
+  margin-top: 10px; 
 }
 
 #vumeter {
   height: 100%;
-  background-color: green; /* Puedes ajustar el color del vúmetro según tus preferencias */
+  background-color: green; 
 }
 
 
