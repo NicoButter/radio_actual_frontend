@@ -1,149 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es_ES">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Actual 93.5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Radio Actual 2024</title>
+    
+    <link href="./styles/styles.css" rel="stylesheet" type="text/css">
 
-    <!-- Link google fonts  -->
+    <!-- Link Favicon --> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+
+    <!-- Enlace a fortawasome --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Link google fonts --> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-
-    <!-- Link Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
-
-    <!-- Link Styles -->
-    <link rel="stylesheet" href="./styles/styles.css">
-
-    <!-- Enlace a fortawasome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
-
-    <!-- link howler -->
-    <script src="./js/howler.min.js"></script>
-
-    <script src="https://unpkg.com/wavesurfer.js"></script>
-    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.peaks.js"></script>
-
 </head>
+
+
+
+
+
 <body>
-    <header>
-        <span class="header-border-top"></span>
-        <span class="header-border-right"></span>
-        
-        <span class="header-border-left"></span>
-        
-        <div 
-            class="logo"><img src="./images/logo-radio-header.png" alt="Logo de la radio">
-        </div>
-
-        <span class="header-border-bottom"></span>
-
-    </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="/index.html" target="_blank">inicio -</a></li>
-            <li><a href="https://www.santacruzalmomento.com.ar/" target="_blank">de interés -</a></li>
-            <li><a href="" target="_blank">contacto -</a></li>
-            <li> <a href="">escribinos: 02966 - 766 935</a></li>
-        </ul>
-    </nav>
-    <main>
-        <article>
-            <h1>actual como vos</h1>
-
-            <!-- <audio id="audio" controls>
-                <source src="https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA" type="audio/mp3">
-            </audio> -->
-
-            <div class="reproductor">
-                <p>Escucha nuestra transmisión en vivo</p>
-                <button id="play-pause">Play</button>
-                <input type="range" id="volume-control" min="0" max="100" value="50">
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <header> 
+            <div class="titulo-radio-actual-container">
+                <a href=""><h3 class="titulo-radio-actual">RADIO ACTUAL</h3></a>
             </div>
             
-            <div class="visualizer-container"></div>
-            <div class="iframe-container">
-                <iframe width="480" height="300" src="https://www.youtube.com/embed/L-LHSQ-78Ps" title="Cámaras Ushuaia" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen autoplay muted>
-                </iframe>
+            <nav>
+                <ul>
+                    <li><a href="#hero">HOME</a></li>
+                    <li><a href="#about">SOBRE NOSOTROS</a></li>
+                    <li> <a href="#contact">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+        </header>
+       
+          
+        <!-- Header Section -->
+        <section class="logo-header" id="logo-header">
+            <img src="./images/marca_ACTUAL_935.png" alt="">
+            <h2>escuchá la radio en vivo!</h2>
+            <audio controls>
+                <source src="tu_archivo_de_audio.mp3" type="audio/mp3">
+                <!-- Otra fuente de audio en caso de que la primera no sea compatible -->
+                <source src="https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <div class="santa-cruz-al-momento">
+                <img src="./images/banner-santa-cruz-al-momento.png">
             </div>
-        </article>
-        <section>
-            <div class="section-content">
-                <div id="rss-feed">
-                  <h2>últimas noticias</h2>
-                  <ul id="news-list">
-                    <!-- Aquí se cargarán las noticias del feed RSS -->
-                  </ul>
-                </div>
-                <div id="ad-banner">
-                  <img src="./images/publicite_aqui.png" alt="publicite_aqui">
-                  <img src="./images/publicite_aqui.png" alt="publicite_aqui">
-                  <img src="./images/publicite_aqui.png" alt="publicite_aqui">
-                </div>
+            
+        </section>
+           
+        <!-- Seccion de Noticias -->
+        <section class="ultimas-noticias" id="about">
+            <h2 class="hidden">About</h2>
+            <div id="rss-feed">
+                <ul id="news-list">
+                 Acá se cargan las noticias del feed RSS 
+                </ul>
             </div>
         </section>
-        
-    </main>
-    <footer>
-        <div class="logo-footer">
-            <img src="./images/logo-trasnparente-footer.png" alt="">
+         
+       
+       
+       
+        <!-- Stats Gallery Section -->
+        <div class="gallery-ad-banners">
+            <div class="thumbnail">
+                <h4>RFC Insumos de oficina</h4>
+                <a href="https://www.rfcsa.com.ar/"><img src="./images/banner-rfc.png" alt=""></a>
+                <p>Nos dedicamos a la comercialización de insumos informáticos y para oficina...</p>
+            </div>
+
+            <div class="thumbnail">
+                <h4>Publicitá con nosotros</h4>
+                <a href="CONTACTO"><img src="./images/publicite_aqui.png" alt=""></a>
+                <p>Contactanos y comenzá a publicitar tu servicio o producto con nosotros!</p>
+            </div>
+
+            <div class="thumbnail">
+                <h4>SS Servicios</h4>
+                <a href="https://www.ssservicios.com.ar/"><img src="./images/banner-ss.png" alt=""></a>
+                <p>Toda conexión es posible!</p>
+            </div>
+
+            <div class="thumbnail">
+                <h4>Publicitá con nosotros!</h4>
+                <a href="CONTACTO"><img src="./images/publicite_aqui.png" alt=""></a>
+                <p>Contactanos y comenzá a publicitar tu servicio o producto con nosotros!</p>
+            </div>
         </div>
-        <p class="footer-description">Descubre, disfruta y comparte la mejor música con nosotros</p>
-        <p class="copyright">&copy; Radio Actual - 2024</p>
-        <div class="redes-sociales">
-            <span class="border-top"></span>
-            <h2>seguinos</h2>
-            <a href="https://www.facebook.com/actualcomovos"><img src="./images/logo-facebook.png" alt="logo-facebook"></a>
-            <a href="https://www.instagram.com/actualcomovos/"><img src="./images/logo-instagram.png" alt="logo-instagram"></a>
-            <a href="https://www.twitch.tv/actualcomovos"><img src="./images/logo-twitch.png" alt="logo-twitch"></a>
-            <a href="http://www.twitter.com/actualcomovos"></a><img src="./images/logo-x.png" alt="logo-x">
-            <a href="https://t.me/actualrgl"><img src="./images/logo-telegram.png" alt="logo-telegram"></a>
-        </div>
-    </footer>
-    
-   
-    <!-- Script JavaScript para el reproductor de audio -->
-    <script>
-        // Inicializa el reproductor de audio
-        
-        var sound = new Howl({
-            src: ['https://stream-153.zeno.fm/fh68vgu6echvv?zs=O2Vz_YmPRK2LYhik5c45OA'],
-            volume: 1.0,  // Establece el volumen inicial (0.0 a 1.0)
-            html5: true  // Usa la etiqueta HTML5 <audio> si está disponible
-        });
 
-        var playButton = document.getElementById('play-pause');
-        var volumeControl = document.getElementById('volume-control');
+        <!-- Parallax -->
+        <section class="banner">
+            <h2 class="parallax">RADIO ACTUAL...como vos</h2>
+            <p class="parallax_description">Escuchá la mejor musica mientras leés las últimas noticias de Santa Cruz y el mundo!</p>
+        </section>
 
-        // Verificar el estado de reproducción
-        playButton.addEventListener('click', function () {
-            if (sound.playing()) {
-                sound.pause();  // Pausar si está reproduciendo
-                playButton.innerHTML = 'Play';
-            } else {
-                sound.play();  // Reproducir si no está reproduciendo
-                playButton.innerHTML = 'Pause';
-            }
-        });
 
-        // Controlar el volumen
-        volumeControl.addEventListener('input', function () {
-            var volume = parseFloat(this.value) / 100;  // Convertir el valor del rango a un valor de volumen entre 0.0 y 1.0
-            sound.volume(volume);  // Establecer el volumen del sonido
-        });
-    </script>
+        <!-- Footer -->
+        <footer>
+            <article class="footer_column">
+                <h3>Sobre nosotros</h3>
+                <img src="./images/radio-studio.jpg"
+                    alt="" width="400" height="200" class="cards" />
+                <p>Somos una radio actual y joven que está transmitiendo la mejor música y compartiendo las úlltimas noticias de Santa Cruz y el mundo para vos!</p>
+            </article>
+            <article class="footer_column">
+                <h3>Donde nos podés encontrar</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1472.593622769265!2d-69.22548808863861!3d-51.630583762815824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1705187031789!5m2!1ses!2sar"
+                 width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                
+                
+                <!-- <img src="./images/radio-studio.jpg" alt="" width="400" height="200" class="cards" /> -->
+                <p>Somos de Río Gallegos provincia de Santa Cruz Argentina. Podes encontrarnos en..... escribinos: 02966 - 766 935</p>
+            </article>
+        </footer>
 
-    <!-- Link noticias js -->
+        <!-- Footer Section -->
+        <!-- <section class="footer_banner" id="contact">
+            <h2 class="hidden">Footer Banner Section </h2>
+            <p class="hero_header">Suscribite para las ultimas noticias &amp; UPDATES</p>
+            <div class="button">subscribe</div>
+        </section> -->
+        <!-- Copyrights Section -->
+        <div class="copyright">&copy;2024- <strong>Radio Actual</strong></div>
+    </div>
+    <!-- Main Container Ends -->
+
     <script src="./js/main.js"></script>
-    <script src="./js/visualizer.js"></script>
-
-    <!-- Vumetro -->
-    <script src="https://unpkg.com/wavesurfer.js"></script>
-    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.peaks.js"></script>
-
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
