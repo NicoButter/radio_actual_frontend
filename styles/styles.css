@@ -237,7 +237,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
 	background-color: #2D9AB7;
-	background-image: url(../images/parallax.jpg);
+	background-image: url(./images/parallax.jpg);
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
